@@ -1,0 +1,45 @@
+<ul>
+    <li class="item">
+
+
+        <div class="item-content">
+
+            <div class="header">
+                <div class="mobile-image">
+                    <div class="title">{{item.content.title}}</div>
+                    <img ng-src="{{ item.content.poster }}" alt="" />
+                </div>
+                <div class="item-content">
+                    <div class="title">Login{{item.content.title}}</div>
+                    <div  ng-show="err" class="alert alert-danger" >
+                        {{ err }}
+                    </div>
+                    <div class="body">Om te reserveren dient er ingelogd worden. Beschikt u nog niet over login gegevens klik dan op de "Create Account" button onderaan het formulier</div>
+                    <div class="body">
+                        <div class="form-group">
+                        <label>Email adress</label>
+                        <input type="email" class="form-control" placeholder="Enter email" ng-model="email">
+                    </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Password" ng-model="pass">
+                        </div>
+                        <div class="form-group" ng-cloak ng-show="createMode">
+                            <label>Confirm password</label>
+                            <input type="password" class="form-control" placeholder="Password" ng-model="confirm">
+                        </div>
+                        <button type="text" class="btn btn-success" ng-click="login()" ng-hide="createMode">Login</button>
+                        <button ng-click="createMode = true"  class="btn btn-success" ng-hide="createMode">Register</button>
+                        <button ng-cloak ng-show="createMode"  class="btn btn-success" ng-click="createAccount()">Create Account</button>
+                        <button ng-cloak ng-show="createMode"  class="btn btn-success" ng-click="createMode = false">Cancel</button>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </li>
+</ul>

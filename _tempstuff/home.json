@@ -1,0 +1,40 @@
+[
+    {
+        "id":0,
+        "content_type":"header",
+        "m_type": "hosted_video",
+        "content": {
+            "title":"WELCOME TO TRASK INDUSTRIES",
+            "body":"Founded by Bolivar Trask in 1967, Trask Industries was built on the philosophy of advancing human progress through technology and genetics. Our early research led to the revolutionary development of DNA-Generated Prosthetics. Since then, Trask Industries has taken the lead in genetics-based defense technology with our Mutant Detection Device and Sentinel program. We’ve partnered with international governments to ensure that any threat to human extinction is preemptively neutralized. With Trask Industries, you can rest assured that the future of humanity is in safe hands.",
+            "src":"uploads/video/Xmen_Trask_Loop_NB02",
+            "poster":"uploads/video/Xmen_Trask_Loop_NB02.jpg",
+            "fallback":"uploads/video/Xmen_Trask_Loop_NB02.jpg"
+        },
+        "order":0,
+        "marqueeVisible" : "true"
+    },
+    {
+        "id":1,
+        "content_type":"image",
+        "content": {
+            "title":"Bolivar Trask",
+            "body":"",
+            "src":"uploads/img/list-trask.jpg",
+            "poster":"",
+            "quote":"The mutant threat is the defining issue of our time. We can choose to stem the impending tide of extinction or we can stand by passively and allow it to wash away any remnants  of our species.",
+            "quoteBy":"Founder, Bolivar Trask - 1973"
+        },
+        "order":0,
+        "marqueeVisible" : "false"
+    },
+    {
+        "id":2,
+        "content_type":"text",
+        "content": {
+            "title":"",
+            "body":"Even from his early years as a research assistant, Bolivar always maintained a particular interest in the origin and evolution of humanity. Following in the footsteps of Mendel, Watson and Crick, Trask made it his goal to unlock the mysteries of human DNA. What he did not anticipate was the discovery of the X-Gene, a genetic finding that would prove to be the most significant of the 20th century.<br/><br/>Trask soon hypothesized the impending extinction of the human race. His early theories were ridiculed by his contemporaries and with no one to fund his research, Trask cared enough about humanity to invest in the founding of Trask Industries in 1967. Since its founding, Trask Industries has been at the forefront of human progress, partnering with domestic and international governments since the Nixon administration. Trask’s early ambition for genetic progress continues to fuel our technological innovations today."
+        },
+        "order":0,
+        "marqueeVisible" : "false"
+    }
+]

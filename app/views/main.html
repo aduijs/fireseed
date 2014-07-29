@@ -1,0 +1,76 @@
+<ul>
+    <li ng-repeat="item in list | orderBy:order" class="item" rel="item_{{ item.id }}">
+        <div ng-switch on="item.content_type" class="{{ item.content_type }}">
+            <div ng-switch-when="header">
+                <div class="mobile-image">
+                    <div class="title">{{item.content.title}}</div>
+                    <img ng-src="{{ item.content.poster }}" alt="" />
+                </div>
+                <div class="item-content">
+                    <div ng-show="item.content.title" class="title">{{item.content.title}}</div>
+                    <div ng-show="item.content.body" class="body">{{item.content.body}}</div>
+                </div>
+            </div>
+            <div ng-switch-when="text">
+                <div class="item-content">
+                    <div ng-show="item.content.title" class="title">{{item.content.title}}</div>
+                    <div class="body" ng-bind-html="item.content.body"></div>
+                </div>
+            </div>
+            <div ng-switch-when="table">
+                <div class="item-content">
+                    <div class="title">{{item.content.title}}</div>
+                    <table>
+                        <tr ng-repeat="row in item.content.rows">
+                            <td ng-repeat="data in row">{{ data }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div ng-switch-when="image">
+                <div class="item-content">
+                    <div ng-show="item.content.title" class="title">{{item.content.title}}</div>
+                    <div ng-show="item.content.body" class="body">{{item.content.body}}</div>
+                    <div class="item-image">
+                        <img class="poster" src="{{ item.content.src }}" alt="" ref="{{ item.content.src }}"/>
+                        <div class="quote-box" ng-show="item.content.quote">
+                            <div class="quote">
+                                "{{item.content.quote}}"
+                            </div>
+                            <div class="by">
+                                {{item.content.quoteBy}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-switch-when="img_sequence">
+                <div class="item-content">
+                    <div ng-show="item.content.title" class="title">{{item.content.title}}</div>
+                    <div ng-show="item.content.body" class="body">{{item.content.body}}</div>
+                    <div class="list_imagesequence" rel="{{ item.content.src }}" ref="{{ item.content.frames }}"><div class="_360">360&#176;</div></div>
+                </div>
+            </div>
+            <div ng-switch-when="video" class="item-content">
+                <div ng-show="item.content.title" class="title">{{item.content.title}}</div>
+                <div ng-show="item.content.body" class="body">{{item.content.body}}</div>
+                <div class="list_yt" rel="{{item.content.src}}" >
+                    <img class="poster" src="" ref="{{item.content.poster}}" />
+                    <div class="container" id="ytplayer_{{ item.id }}"></div>
+                    <div class="icon-play"></div>
+                </div>
+            </div>
+            <div ng-switch-when="infographic">
+                <div class="item-content">
+                    <div ng-show="item.content.title" class="title">{{item.content.title}}</div>
+                    <div ng-show="item.content.body" class="body">{{item.content.body}}</div>
+                    <div class="item-image">
+                        <iframe ng-src="infographics/{{ item.content.src }}/index.html" class="graphic" rel="{{ item.content.src }}" id="{{ item.content.src }}" height="{{ item.content.height }}" ref="{{ item.content.height }}" width="100%" frameborder="0" allowTransparency="true" ></iframe>
+                    </div>
+                    <div ng-show="item.content.body_after" class="body">{{item.content.body_after}}</div>
+                </div>
+            </div>
+        </div>
+        <hr ng-show="item.border" />
+    </li>
+</ul>

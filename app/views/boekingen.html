@@ -1,0 +1,30 @@
+<ul>
+    <li class="item">
+
+
+        <div class="item-content">
+
+            <div class="header">
+                <div class="mobile-image">
+                    <div class="title">{{item.content.title}}</div>
+                    <img ng-src="{{ item.content.poster }}" alt="" />
+                </div>
+                <div class="item-content">
+                    <div class="title">Reserveren{{item.content.title}}</div>
+                    <div class="body">
+                        <div class="form-group">
+                            <label>welkom {{user.email}}</label>
+                            <label>
+                                <span>Email:</span>
+                                <input type="text" name="name" ng-model="user.email"/>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </li>
+</ul>

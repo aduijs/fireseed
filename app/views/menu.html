@@ -1,0 +1,20 @@
+<div class="trask-logo menu-item home" rel="home">
+    <div class="nav-logo-trask">Trask</div>
+    <div class="hitarea"></div>
+</div>
+
+<ul class="menu">
+
+    <li  ng-repeat="menu in menus" ng-class="{active: isActive(menu)}" class="menu-item {{ menu.data }}" rel="{{ menu.data }}">
+        <div class="icon"></div>
+        <div class="title">{{ menu.text }}</div>
+        <a class="hitarea" href="#{{menu.url}}"></a>
+    </li>
+
+</ul>
+
+<div class="bottom-align">
+    <div class="menu-item share" ng-click="share($event)" rel="share">
+        <span>SHARE</span>
+    </div>
+</div>
