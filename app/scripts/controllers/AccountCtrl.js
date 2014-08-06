@@ -11,7 +11,7 @@
     angular.module('myApp')
         .controller('AccountCtrl', ['$scope', 'loginService', 'changeEmailService', 'firebaseRef', 'syncData', '$location', 'FBURL', function($scope, loginService, changeEmailService, firebaseRef, syncData, $location, FBURL) {
             $scope.syncAccount = function() {
-                $scope.user = {};
+                //$scope.user = {};
                 console.log($scope.auth);
                 syncData(['users', $scope.auth.user.uid]).$bind($scope, 'user').then(function(unBind) {
                     $scope.unBindAccount = unBind;

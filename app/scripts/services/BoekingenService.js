@@ -7,15 +7,24 @@
 (function(angular){
     'use strict';
     angular.module('myApp').service('BoekingenService', function(FBURL){
-        var firebaseRef = new Firebase(FBURL).child('boekingen');
+        var firebaseRef = new Firebase(FBURL).child('reserveringen');
 
         return {
-            loadContent: function loadContent(cb) {
-                firebaseRef.once('value', function(snapshot){
-                    cb.call(this, snapshot.val());
+            boekingenLoaded: function boekingenLoaded(cb) {
+                firebaseRef.on('child_added', function (snapshot) {
+                    //cb.call(this, snapshot.val());
+                    var val = snapshot.val();
+                        cb.call(this, {
+                        aankomst: val.aankomst,
+                        vertrek: val.vertrek,
+                        aantalnachten: val.aantalnachten,
+                        uid: val.uid
+                        /*text: val.text,
+                        type: val.type,
+                        url: val.url*/
+                    });
                 });
             }
         };
-
     });
 })(window.angular);

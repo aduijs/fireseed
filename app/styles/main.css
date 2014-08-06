@@ -853,3 +853,11 @@ background-position: 0 0;
         display: none;
     }
 }
+.reserverenForm {
+      transition:0.5s linear all;
+      background: white;
+}
+.reserverenForm.ng-invalid {
+    background: red;
+    color:white;
+}
